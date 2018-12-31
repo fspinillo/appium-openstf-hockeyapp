@@ -7,6 +7,6 @@ pyparsing==2.2.0
 pytest==3.6.1
 pytest-rerunfailures==2.1.0
 python-dotenv==0.8.2
-requests==2.10.0
+requests=2.20.0
 selenium==3.4.2
 six==1.10.0
