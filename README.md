@@ -8,3 +8,5 @@ If you would like to try and use this there are some things you will need to con
 * Follow the steps for OpenSTF [API](https://github.com/openstf/stf/blob/master/doc/API.md) use and copy your `adbkey` and `adbkey.pub` to the `appium-server` folder  
 * Modify the `test-runner.sh` script to match your Android apps name (lines 104 & 109)  
 * Place your Pytest suite into a `tests` folder
+
+The `wait-for-appium` script is needed to ensure the Appium server is up and running before executing the tests. It's a simple cURL to make sure the server is active on the specified port.
