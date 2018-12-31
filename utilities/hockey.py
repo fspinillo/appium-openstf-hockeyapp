@@ -10,7 +10,11 @@ dotenv_path = (os.path.join(sys.path[0], '../.env'))
 load_dotenv(dotenv_path)
 
 app_token = os.environ.get("HOCKEY")
+
+"""This referrs to the ID for your RC/Dev builds to be tested"""
 android_rc = os.environ.get("ANDROID_RC")
+
+"""This referrs to the ID for the builds in the Play store"""
 android_store = os.environ.get("ANDROID_STORE")
 base_url = "https://rink.hockeyapp.net/api/2/apps"
 
