@@ -1,0 +1,20 @@
+version: "3"
+services:
+  appium-server:
+    build: appium-server/
+    ports:
+      - "4723:4723"
+    environment:
+      - REMOTE_ADB=true
+      - ANDROID_DEVICES=${DEVICE_URL}
+      - RELAXED_SECURITY=true
+  pyslim:
+    image: pyslim
+    build:
+      context: .
+      dockerfile: py-docker/Dockerfile
+    depends_on:
+      - appium-server
+    command: ["./wait-for-appium.sh"]
+    environment:
+      - DRIVER_HOST=appium-server
